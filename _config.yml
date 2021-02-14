@@ -15,4 +15,5 @@ github_username:  jekyll
 plugins:
   - jekyll-remote-theme
 
-remote_theme: ngzhio/jekyll-theme-hamilton
+#remote_theme: ngzhio/jekyll-theme-hamilton
+remote_theme: benbalter/retlab
