@@ -1,0 +1,23 @@
+// fonts
+.site-title {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: #464646 !important;
+}
+
+.post-title {
+    font-family: 'Roboto Mono', monospace;
+    color: #3b6b56;
+}
+
+h1,h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+
+
+// remove subscribe button
+.feed-subscribe {
+    display: none;
+}
