@@ -17,7 +17,27 @@ h1,h2 {
 }
 
 
-// remove subscribe button
-.feed-subscribe {
+// spacing
+.wrapper {
+    max-width: calc(1700px - (#{$spacing-unit}));
+}
+
+.site-sidebar {
+    padding: 2rem 20px 2rem 0px;;
+}
+
+.wrapper {
+    max-width: calc(1700px - (2rem * 2));
+    padding-right: 2rem;
+    padding-left: 1rem;
+}
+
+.site-body{
+    grid-template-columns: calc(1700px * 0.09) 1fr;
+}
+
+
+// removing stuff
+.feed-subscribe, .sidebar-icon {
     display: none;
 }
