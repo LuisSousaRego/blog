@@ -36,6 +36,19 @@ h1,h2 {
     grid-template-columns: calc(1700px * 0.09) 1fr;
 }
 
+@media (max-width: 768px) {
+    .site-body {
+        grid-template-columns: 1fr;
+    }
+
+    .site-title {
+        font-size: 1.15rem;
+    }
+    
+    .wrapper {
+        padding-left: 10px;
+    }
+}
 
 // removing stuff
 .feed-subscribe, .sidebar-icon {
