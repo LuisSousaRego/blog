@@ -19,7 +19,7 @@ Second, the database was used by other services and I only wanted the audit to h
 
 Trying to solve this I tried a lot of different ideas, some of them more sensible than others, until after long googling sessions finally finding the key to solve both problems:
 
-```SQL
+```
 SET LOCAL audit.userId TO '123';
 ```
 
@@ -29,7 +29,7 @@ PostgreSQL allows to set custom variables at any time by querying the database. 
 So here is a possible minimal implementation for the problem:
 
 Start by creating the audit table in the database
-```SQL
+```
 CREATE TABLE audit
 (
     id serial PRIMARY KEY,
@@ -43,7 +43,7 @@ The user id field references the user record in the proper table and the states 
 
 Then create the function that will be called by the trigger:
 
-```SQL
+```
 CREATE OR REPLACE FUNCTION audit_trigger()
     RETURNS TRIGGER AS $audit_trigger$
 DECLARE
@@ -69,7 +69,7 @@ This function reads the user id from the custom var and the state of the affecte
 
 Now apply the trigger to every table that needs auditing.
 
-```SQL
+```
 CREATE TRIGGER internal_user_audit
     BEFORE UPDATE OR INSERT OR DELETE
     ON <table_name>
@@ -80,7 +80,7 @@ CREATE TRIGGER internal_user_audit
 Finally in the backend wrap every query inside a transaction and set the right userId in the beginning.
 
 
-```SQL
+```
 BEGIN;
     SET LOCAL audit.userId TO <user_id>;
     -- query here
