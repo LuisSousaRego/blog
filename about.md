@@ -1,7 +1,6 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: about
 ---
 
 I read good things about blogging.

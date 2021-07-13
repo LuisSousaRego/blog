@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "What this is about"
-date: 2021-02-16 21:58:30 +0100
-tags: 
 ---
 
 

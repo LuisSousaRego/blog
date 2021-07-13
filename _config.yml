@@ -6,13 +6,7 @@ author: Luís Sousa Rêgo
 baseurl: /Overcoming-poor-programming
 url: https://luissousarego.github.io
 
-date_format: "%Y/%m/%d"
-
-skin: custom
+#theme: no-style-please
 
 # Build settings
-plugins:
-  - jekyll-feed
-  - jekyll-remote-theme
-
-remote_theme: ngzhio/jekyll-theme-hamilton
+remote_theme: riggraz/no-style-please

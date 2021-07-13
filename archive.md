@@ -1,5 +1,4 @@
 ---
-layout: archive-years
-title: Archive
-permalink: /archive/
+layout: archive
+title: archive
 ---

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Audit trail in PostgreSQL"
-date: 2021-07-13 07:00:00 +0000
-tags: PostgreSQL
 ---
 
 6 months or so ago I was building an app that required implementing an audit trail in a PostgreSQL database. At the time I had almost no experience with SQL, so I struggled a bit to find what ended up being quite a simple solution. During this struggle I could not find online almost any resources about what I thought was a common problem, so I'll share what I got.
