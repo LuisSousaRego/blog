@@ -52,11 +52,14 @@ BEGIN
     uid := current_setting('audit.userId', true)::integer;
     IF EXISTS (SELECT id FROM <users_table> WHERE id = uid) THEN
         IF (TG_OP = 'INSERT') THEN
-            INSERT INTO audit (userId, stateBefore, stateAfter) VALUES (uid, NULL, row_to_json(NEW));
+            INSERT INTO audit (userId, stateBefore, stateAfter) 
+            VALUES (uid, NULL, row_to_json(NEW));
         ELSIF (TG_OP = 'UPDATE') THEN
-            INSERT INTO audit (userId, stateBefore, stateAfter) VALUES (uid, row_to_json(OLD), row_to_json(NEW));
+            INSERT INTO audit (userId, stateBefore, stateAfter) 
+            VALUES (uid, row_to_json(OLD), row_to_json(NEW));
         ELSIF (TG_OP = 'DELETE') THEN
-            INSERT INTO audit (userId, stateBefore, stateAfter) VALUES (uid, row_to_json(OLD), NULL);
+            INSERT INTO audit (userId, stateBefore, stateAfter) 
+            VALUES (uid, row_to_json(OLD), NULL);
             RETURN OLD;
         END IF;
     END IF;

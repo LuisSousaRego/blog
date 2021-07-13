@@ -7,7 +7,7 @@ baseurl: /Overcoming-poor-programming
 url: https://luissousarego.github.io
 
 
-remote_theme: riggraz/no-style-please
+remote_theme:  LuisSousaRego/a-little-bit-of-style-please 
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
