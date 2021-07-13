@@ -12,6 +12,7 @@ skin: custom
 
 # Build settings
 plugins:
+  - jekyll-feed
   - jekyll-remote-theme
 
 remote_theme: ngzhio/jekyll-theme-hamilton
