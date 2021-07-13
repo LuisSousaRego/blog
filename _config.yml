@@ -6,7 +6,18 @@ author: Luís Sousa Rêgo
 baseurl: /Overcoming-poor-programming
 url: https://luissousarego.github.io
 
-#theme: no-style-please
 
-# Build settings
 remote_theme: riggraz/no-style-please
+
+theme_config:
+  appearance: "auto" # can be "light", "dark" or "auto"
+  back_home_text: ".." # customize text for homepage link in post layout
+  date_format: "%Y-%m-%d" # customize how date is formatted
+  show_description: false # show blog description in home page
+
+sass:
+  style: :compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
