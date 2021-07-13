@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Audit trail in PostgreSQL"
-date: 2021-07-13 09:00:00 +0000
+date: 2021-07-13 07:00:00 +0000
 tags: PostgreSQL
 ---
 
