@@ -6,7 +6,7 @@ title: "Audit trail in PostgreSQL"
 6 months or so ago I was building an app that required implementing an audit trail in a PostgreSQL database. At the time I had almost no experience with SQL, so I struggled a bit to find what ended up being quite a simple solution. During this struggle I could not find online almost any resources about what I thought was a common problem, so I'll share what I got.
 
 
-I was building a web app that would allow a small group of internal users to do CRUD like operations safely on a PostgreSQL database. These users had to be able to search, create, change and delete results in some of the database tables just by opening a web page, authenticating, looking through lists and clicking a few buttons buttons.
+I was building a web app that would allow a small group of internal users to do CRUD like operations safely on a PostgreSQL database. These users had to be able to search, create, change and delete results in some of the database tables just by opening a web page, authenticating, looking through lists and clicking a few buttons.
 
 One fundamental requirement was an audit trail. The database should have a new "audit" table where all the changes made to the other tables using this web app had to be registered.
 More specifically, the state of each row before and after the change, as well as the user id of whoever was using the app.
@@ -14,7 +14,7 @@ More specifically, the state of each row before and after the change, as well as
 
 At the time I struggled with two things:
 
-First, I only had access to the user id at the application level, and only had access to the state of the rows at the database level. It was not easy in the backend to know how each row being changed was before the change happened, and I couldn't figure out how the the database could know what was the right user id for each individual query.
+First, I only had access to the user id at the application level, and only had access to the state of the rows at the database level. It was not easy in the backend to know how each row being changed was before the change happened, and I couldn't figure out how the database could know what was the right user id for each individual query.
 Second, the database was used by other services and I only wanted the audit to happen when the data was changed by this app.
 
 Trying to solve this I tried a lot of different ideas, some of them more sensible than others, until after long googling sessions finally finding the key to solve both problems:
