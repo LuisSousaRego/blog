@@ -4,7 +4,7 @@ description: I read good things about blogging. This is me trying.
 author: Luís Sousa Rêgo
 
 baseurl: ""
-url: https://overcomingpoorprogramming.blog
+url: overcomingpoorprogramming.blog
 
 
 remote_theme:  LuisSousaRego/a-little-bit-of-style-please 
