@@ -13,5 +13,5 @@ entries:
         url: about
       - title: github
         url_out: https://github.com/LuisSousaRego
-      - title: linkedin
-        url_out: https://www.linkedin.com/in/luissousarego/
+      - title: rss
+        url: feed.xml

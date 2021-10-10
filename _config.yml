@@ -3,8 +3,8 @@ description: I read good things about blogging. This is me trying.
 
 author: Luís Sousa Rêgo
 
-baseurl: /Overcoming-poor-programming
-url: https://luissousarego.github.io
+baseurl: ""
+url: overcomingpoorprogramming.blog
 
 
 remote_theme:  LuisSousaRego/a-little-bit-of-style-please 
