@@ -2,10 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://overcomingpoorprogramming.blog/post/2021-07-15-blogging-from-my-phone/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://overcomingpoorprogramming.blog/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://overcomingpoorprogramming.blog/post/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://overcomingpoorprogramming.blog/post/2021-07-13-audit-trail-in-postgresql/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://overcomingpoorprogramming.blog/post/2021-02-16-what-this-is-about-and-background/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://overcomingpoorprogramming.blog/categories/</loc>
+  </url><url>
+    <loc>https://overcomingpoorprogramming.blog/tags/</loc>
   </url>
 </urlset>
