@@ -1,7 +1,9 @@
 ---
-layout: post
 title: "Audit trail in PostgreSQL"
+date: 2021-07-13
+draft: false
 ---
+
 
 6 months or so ago I was building an app that required implementing an audit trail in a PostgreSQL database. At the time I had almost no experience with SQL, so I struggled a bit to find what ended up being quite a simple solution. During this struggle I could not find online almost any resources about what I thought was a common problem, so I'll share what I got.
 
@@ -19,7 +21,7 @@ Second, the database was used by other services and I only wanted the audit to h
 
 Trying to solve this I tried a lot of different ideas, some of them more sensible than others, until after long googling sessions finally finding the key to solve both problems:
 
-```
+```SQL
 SET LOCAL audit.userId TO '123';
 ```
 
@@ -29,7 +31,8 @@ PostgreSQL allows to set custom variables at any time by querying the database. 
 So here is a possible minimal implementation for the problem:
 
 Start by creating the audit table in the database
-```
+
+```SQL
 CREATE TABLE audit
 (
     id serial PRIMARY KEY,
@@ -43,7 +46,7 @@ The user id field references the user record in the proper table and the states 
 
 Then create the function that will be called by the trigger:
 
-```
+```SQL
 CREATE OR REPLACE FUNCTION audit_trigger()
     RETURNS TRIGGER AS $audit_trigger$
 DECLARE
@@ -52,11 +55,14 @@ BEGIN
     uid := current_setting('audit.userId', true)::integer;
     IF EXISTS (SELECT id FROM <users_table> WHERE id = uid) THEN
         IF (TG_OP = 'INSERT') THEN
-            INSERT INTO audit (userId, stateBefore, stateAfter) VALUES (uid, NULL, row_to_json(NEW));
+            INSERT INTO audit (userId, stateBefore, stateAfter) 
+                VALUES (uid, NULL, row_to_json(NEW));
         ELSIF (TG_OP = 'UPDATE') THEN
-            INSERT INTO audit (userId, stateBefore, stateAfter) VALUES (uid, row_to_json(OLD), row_to_json(NEW));
+            INSERT INTO audit (userId, stateBefore, stateAfter) 
+                VALUES (uid, row_to_json(OLD), row_to_json(NEW));
         ELSIF (TG_OP = 'DELETE') THEN
-            INSERT INTO audit (userId, stateBefore, stateAfter) VALUES (uid, row_to_json(OLD), NULL);
+            INSERT INTO audit (userId, stateBefore, stateAfter) 
+                VALUES (uid, row_to_json(OLD), NULL);
             RETURN OLD;
         END IF;
     END IF;
@@ -69,7 +75,7 @@ This function reads the user id from the custom var and the state of the affecte
 
 Now apply the trigger to every table that needs auditing.
 
-```
+```SQL
 CREATE TRIGGER internal_user_audit
     BEFORE UPDATE OR INSERT OR DELETE
     ON <table_name>
@@ -80,7 +86,7 @@ CREATE TRIGGER internal_user_audit
 Finally in the backend wrap every query inside a transaction and set the right userId in the beginning.
 
 
-```
+```SQL
 BEGIN;
     SET LOCAL audit.userId TO <user_id>;
     -- query here

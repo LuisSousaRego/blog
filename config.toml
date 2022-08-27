@@ -1,0 +1,11 @@
+baseURL = 'https://overcomingpoorprogramming.blog'
+languageCode = 'en-us'
+title = 'Overcoming poor programming'
+theme = "elephants"
+
+[params]
+    sitename = "Overcoming poor programming"
+
+[markup]
+  [markup.highlight]
+    style = 'github'

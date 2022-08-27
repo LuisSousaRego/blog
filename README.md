@@ -1,5 +1,5 @@
 # Overcoming poor programming
 
-Another blog about software engineering
+A blog about software development
 
 https://overcomingpoorprogramming.blog/

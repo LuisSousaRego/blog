@@ -1,6 +1,7 @@
 ---
-layout: post
 title: Blogging from my android phone
+date: 2021-07-15
+draft: false
 ---
 
 A few days ago I published my first proper blog post, and I did it entirely from my android phone. I never once touched another device from the moment I wrote the first word until I brought the post online. This includes drafting the idea, writing and testing code snippets, finishing writing the whole post, previewing it and finally publishing it.
