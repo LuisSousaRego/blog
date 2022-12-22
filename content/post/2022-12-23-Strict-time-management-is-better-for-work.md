@@ -1,6 +1,6 @@
 ---
 title: Strict time management is better for work
-date: 2022-12-23
+date: 2022-12-22
 draft: false
 ---
 
