@@ -73,7 +73,7 @@ name = "rss"
 url = "https://overcomingpoorprogramming.blog/index.xml"
 
 [params.analytics.google]
-SiteVerificationTag = "G-M8TQYW9J99"
+SiteVerificationTag = "90TGJe1B-2XlLrvpu_OmIsuG9z8HiIRLG6fD0YKS-ao"
 
 [params.cover]
 hidden = true
