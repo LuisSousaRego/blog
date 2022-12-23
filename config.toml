@@ -6,7 +6,7 @@ enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-googleAnalytics = ""
+googleAnalytics = "G-M8TQYW9J99"
 pygmentsUseClasses = true
 
 [minify]
@@ -73,7 +73,7 @@ name = "rss"
 url = "https://overcomingpoorprogramming.blog/index.xml"
 
 [params.analytics.google]
-SiteVerificationTag = ""
+SiteVerificationTag = "G-M8TQYW9J99"
 
 [params.cover]
 hidden = true
