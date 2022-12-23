@@ -46,7 +46,7 @@ A few minutes every meeting, add up to a significant amount over the day/week.
 Another important factor is that meetings also end on time. 
 Often people just say bye and leave the meeting when the scheduled time is over. 
 This was very surprising to me. 
-I was used for meetings to always drag over the stipulated time and had no idea. 
+I was so used to meetings always dragging over the stipulated time that it never occured to me there were better options. 
 But now makes complete sense. 
 Delays don't accumulate throughout the day. 
 Meetings ending on time allow for the following ones to start on time. 
