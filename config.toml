@@ -1,12 +1,12 @@
-baseURL = "https://overcomingpoorprogramming.com/"
-title = "Overcoming poor programming"
+baseURL = "https://blog.luisrego.com/"
+title = ""
 paginate = 10
 theme = "PaperMod"
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-googleAnalytics = "G-M8TQYW9J99"
+googleAnalytics = ""
 pygmentsUseClasses = true
 
 [minify]
@@ -15,13 +15,13 @@ minifyOutput = true
 
 [params]
 env = "production"
-title = "Overcoming poor programming"
+title = ""
 description = """
 My name is Luís and I am a software developer. 
 Here I write about my projects and experiences, mostly related to programming.
 """
 keywords = ["Blog", "Software Development", "Programming"]
-author = "Luís Sousa Rêgo"
+author = "Luís Rêgo"
 images = ["<link or path of image for opengraph, twitter-cards>"]
 DateFormat = "2006-01-02"
 defaultTheme = "light"
@@ -70,10 +70,10 @@ url = "https://www.linkedin.com/in/luissousarego/"
 
 [[params.socialIcons]]
 name = "rss"
-url = "https://overcomingpoorprogramming.blog/index.xml"
+url = "https://blog.luisrego.com/index.xml"
 
 [params.analytics.google]
-SiteVerificationTag = "90TGJe1B-2XlLrvpu_OmIsuG9z8HiIRLG6fD0YKS-ao"
+SiteVerificationTag = ""
 
 [params.cover]
 hidden = true
